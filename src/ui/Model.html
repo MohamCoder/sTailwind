@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="
+    #root#(
+        $color$= 'gray';
+        $modalTextColor$= 'text-gray-800';
+        $modalPadding$= 'p-4';
+        $modalRounded$= 'rounded-lg';
+        $modalShadow$= 'shadow-lg';
+        $modalTransition$= 'transition duration-300 ease-in-out';
+        $overlayColor$= 'bg-black';
+        $overlayOpacity$= 'opacity-50';
+        $zIndex$ = 'z-10';
+    )"></div>
+    <div class="$overlayColor$ fixed top-0 left-0 w-full h-full flex items-center justify-center $overlayOpacity$">
+    </div>
+    <div
+        class="$zIndex$ fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-$color$-100 text-$color$-800 $modalPadding$ $modalRounded$ $modalShadow$ $modalTransition$">
+        <h2 class="text-lg font-bold mb-2">Modal Title</h2>
+        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor nec pharetra
+            ultricies, ante erat imperdiet velit, nec laoreet enim lacus a velit.</p>
+        <button
+            class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 active:bg-blue-700">Close</button>
+    </div>
+</body>
+
+</html>

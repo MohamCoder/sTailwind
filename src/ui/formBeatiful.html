@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="
+    #root#(
+        $color$='purple';
+        $buttonTextColor$= ' text-white ';
+        $buttonPadding$= ' px-4 py-2 ';
+        $buttonRounded$= ' rounded-lg ';
+        $buttonTransition$= ' transition duration-300 ease-in-out ';
+        $buttonTransform$= ' transform hover:scale-110 active:scale-95 ';
+        $buttonShadow$= ' shadow hover:shadow-lg active:shadow-none ';
+        $autoMargin$='2%';
+        $formPadding$=' p-4 ';
+        $formRounded$=' rounded-lg ';
+        $formShadow$=' shadow-lg ';
+        $inputPadding$=' px-3 py-2 ';
+        $inputRounded$=' rounded-md ';
+        $inputBorder$=' border border-gray-300 ';
+        $inputFocus$=' focus:border-$color$-500 focus:ring-$color$-500 ';
+    )"></div>
+    <h1 class="text-$color$-500 text-center text-4xl font-bold my-4">Contact Us</h1>
+    <div class="max-w-md mx-auto">
+        <form action="#" method="POST" class="$formPadding$ bg-white $formRounded$ $formShadow$">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700 font-medium mb-2">Name:</label>
+                <input type="text" id="name" name="name"
+                    class="$inputPadding$ w-full $inputRounded$$inputBorder$ $inputFocus$" required>
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-medium mb-2">Email:</label>
+                <input type="email" id="email" name="email"
+                    class="$inputPadding$ w-full $inputRounded$$inputBorder$$inputFocus$" required>
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block text-gray-700 font-medium mb-2">Message:</label>
+                <textarea id="message" name="message" rows="4"
+                    class="$inputPadding$ w-full $inputRounded$$inputBorder$$inputFocus$" required></textarea>
+            </div>
+            <div class="
+                #root#(
+                    $buttonTextColor$= 'text-white';
+                    $buttonPadding$= 'px-4 py-2';
+                    $buttonRounded$= 'rounded-lg';
+                    $buttonTransition$= 'transition duration-300 ease-in-out';
+                    $buttonTransform$= 'transform hover:scale-110 active:scale-95';
+                    $buttonShadow$= 'shadow hover:shadow-lg active:shadow-none';
+                    $buttonStyle$='$buttonTextColor$ $buttonPadding$ $buttonRounded$ $buttonTransition$ $buttonTransform$ $buttonShadow$ inline-block m-[$autoMargin$] bg-$color$-500 ';
+                )"></div>
+            <button type="submit" class="
+                $buttonStyle$
+                #hover#(bg-$color$-600 )
+                #active#( bg-$color$-700 )
+                ">Click me!</button>
+        </form>
+    </div>
+</body>
+
+</html>

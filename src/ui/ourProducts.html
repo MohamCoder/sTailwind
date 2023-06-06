@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="
+    #root#(
+        $color$='rose';
+        $buttonTextColor$= 'text-white';
+        $buttonPadding$= 'px-4 py-2';
+        $buttonRounded$= 'rounded-lg';
+        $buttonTransition$= 'transition duration-300 ease-in-out';
+        $buttonTransform$= 'transform hover:scale-110 active:scale-95';
+        $buttonShadow$= 'shadow hover:shadow-lg active:shadow-none';
+        $autoMargin$='2%';
+        $cardPadding$='p-4';
+        $cardRounded$='rounded-lg';
+        $cardShadow$='shadow-lg';
+        $cardTransition$='transition duration-300 ease-in-out';
+        $cardTransform$='transform hover:scale-105 active:scale-95';
+    )"></div>
+    <h1 class="text-$color$-500 text-center text-4xl font-bold my-4">Our Products</h1>
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="$cardPadding$ $cardRounded$ bg-white $cardShadow$ $cardTransition$ $cardTransform$">
+            <img src="https://picsum.photos/200" alt="Product Image" class="w-full rounded-lg mb-2">
+            <h2 class="text-gray-700 text-xl font-semibold mb-1">Product 1</h2>
+            <p class="text-gray-600 text-sm mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod,
+                tortor nec pharetra ultricies, ante erat imperdiet velit, nec.</p>
+            <button class="
+            inline-block m-[$autoMargin$]
+            bg-$color$-500 $buttonTextColor$ $buttonPadding$ $buttonRounded$
+            $buttonTransition$ $buttonTransform$ $buttonShadow$
+            #hover#(bg-$color$-600 )
+            #active#( bg-$color$-700 )
+            ">Learn More</button>
+        </div>
+        <div class=" $cardPadding$ $cardRounded$ bg-white $cardShadow$ $cardTransition$ $cardTransform$ ">
+            <img src="https://picsum.photos/201" alt="Product Image" class="w-full rounded-lg mb-2">
+            <h2 class="text-gray-700 text-xl font-semibold mb-1">Product 1</h2>
+            <p class="text-gray-600 text-sm mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod,
+                tortor nec pharetra ultricies, ante erat imperdiet velit, nec.</p>
+            <button class="
+                        inline-block m-[$autoMargin$]
+                        bg-$color$-500 $buttonTextColor$ $buttonPadding$ $buttonRounded$
+                        $buttonTransition$ $buttonTransform$ $buttonShadow$
+                        #hover#(bg-$color$-600 )
+                        #active#( bg-$color$-700 )
+                        ">Learn More</button>
+        </div>
+        <div class="$cardPadding$ $cardRounded$ bg-white $cardShadow$ $cardTransition$ $cardTransform$">
+            <img src="https://picsum.photos/202" alt="Product Image" class="w-full rounded-lg mb-2">
+            <h2 class="text-gray-700 text-xl font-semibold mb-1">Product 1</h2>
+            <p class="text-gray-600 text-sm mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod,
+                tortor nec pharetra ultricies, ante erat imperdiet velit, nec.</p>
+            <button class="
+                        inline-block m-[$autoMargin$]
+                        bg-$color$-500 $buttonTextColor$ $buttonPadding$ $buttonRounded$
+                        $buttonTransition$ $buttonTransform$ $buttonShadow$
+                        #hover#(bg-$color$-600 )
+                        #active#( bg-$color$-700 )
+                        ">Learn More</button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="
+    #root#(
+        $color$='indigo';
+        $buttonTextColor$= 'text-white';
+        $buttonPadding$= 'px-4 py-2';
+        $buttonRounded$= 'rounded-lg';
+        $buttonTransition$= 'transition duration-300 ease-in-out';
+        $buttonTransform$= 'transform hover:scale-110 active:scale-95';
+        $buttonShadow$= 'shadow hover:shadow-lg active:shadow-none';
+        $autoMargin$='2%';
+        $dropdownPadding$='px-3 py-2';
+        $dropdownRounded$='rounded-md';
+        $dropdownBorder$='border border-gray-300';
+        $dropdownFocus$='focus:border-$color$-500 focus:ring-$color$-500';
+    )"></div>
+    <h1 class="text-$color$-500 text-center text-4xl font-bold my-4">Dropdown Menu</h1>
+    <div class="max-w-md mx-auto">
+        <label for="options" class="block text-gray-700 font-medium mb-2">Choose an option:</label>
+        <select id="options" name="options"
+            class="$dropdownPadding$ $dropdownRounded$ $dropdownBorder$ $dropdownFocus$">
+            <option value="">--Please choose an option--</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+        </select>
+    </div>
+</body>
+
+</html>

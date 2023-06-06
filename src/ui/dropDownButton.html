@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="
+    #root#(
+        $color$= 'yellow';
+        $dropdownTextColor$= 'text-gray-800';
+        $dropdownPadding$= 'p-2';
+        $dropdownMargin$= 'm-4';
+        $dropdownRounded$= 'rounded-lg';
+        $dropdownShadow$= 'shadow';
+        $dropdownTransition$= 'transition duration-300 ease-in-out';
+        $visable$= 'block';
+    )"></div>
+    <div class="relative inline-block">
+        <button
+            class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 active:bg-blue-700">Dropdown</button>
+        <div
+            class="bg-$color$-100 text-$color$-800 $dropdownPadding$ $dropdownMargin$ $dropdownRounded$ $dropdownShadow$ $dropdownTransition$ absolute $visable$">
+            <ul class="list-none">
+                <li class="$dropdownPadding$">Item 1</li>
+                <li class="$dropdownPadding$">Item 2</li>
+                <li class="$dropdownPadding$">Item 3</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="
+    #root#(
+        $color$= 'pink';
+        $toggleWidth$= 'w-12';
+        $toggleHeight$= 'h-6';
+        $togglePadding$= 'p-1';
+        $toggleRounded$= 'rounded-full';
+        $toggleTransition$= 'transition duration-300 ease-in-out';
+        $toggleShadow$= 'shadow-inner';
+        $knobWidth$= 'w-5';
+        $knobHeight$= 'h-5';
+        $knobRounded$= 'rounded-full';
+        $knobShadow$= 'shadow';
+    )"></div>
+    <label
+        class="$toggleWidth$ $toggleHeight$ bg-$color$-200 $togglePadding$ $toggleRounded$ $toggleTransition$ $toggleShadow$ inline-block relative cursor-pointer">
+        <input type="checkbox" class="hidden">
+        <span class="$knobWidth$ $knobHeight$ bg-$color$-500 absolute top-0 left-0 $knobRounded$ $knobShadow$"
+            style="transition: all 0.3s ease-in-out;"></span>
+    </label>
+
+    <script>
+        const input = document.querySelector('input');
+        const span = document.querySelector('span');
+
+        input.addEventListener('change', () => {
+            if (input.checked) {
+                span.style.transform = 'translateX(100%)';
+            } else {
+                span.style.transform = 'translateX(0)';
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="
+    #root#(
+        $heroHeight$='h-screen';
+        $heroBgImage$='https://picsum.photos/1200';
+        $heroBgSize$='bg-cover';
+        $heroBgPosition$='bg-center';
+        $heroStyle$='$heroHeight$ bg-fixed bg-no-repeat $heroBgSize$ $heroBgPosition$';
+        $heroTitleText$='Welcome to My Website!';
+        $heroTitleSize$='text-5xl';
+        $heroTitleWeight$='font-bold';
+        $heroTitleColor$='text-white';
+        $heroTitleStyle$='$heroTitleSize$ $heroTitleWeight$ $heroTitleColor$';
+        $buttonText$='Learn More';
+        $buttonColor$='blue';
+        $buttonTextColor$= 'text-white';
+        $buttonPadding$= 'px-4 py-2';
+        $buttonRounded$= 'rounded-lg';
+        $buttonTransition$= 'transition duration-300 ease-in-out';
+        $buttonTransform$= 'transform hover:scale-110 active:scale-95';
+        $buttonShadow$= 'shadow hover:shadow-lg active:shadow-none';
+        $autoMargin$='2%';
+        $buttonStyle$='$buttonTextColor$ $buttonPadding$ $buttonRounded$ $buttonTransition$ $buttonTransform$ $buttonShadow$ inline-block m-[$autoMargin$] bg-$buttonColor$-500 ';
+    )"></div>
+    <section class="$heroStyle$" style="background-image: url('$heroBgImage$');">
+        <div class="flex flex-col items-center justify-center h-full">
+            <h1 class="$heroTitleStyle$">$heroTitleText$</h1>
+            <button class="
+            $buttonStyle$
+            #hover#(bg-$buttonColor$-600 )
+            #active#( bg-$buttonColor$-700 )
+            ">$buttonText$
+            </button>
+        </div>
+    </section>
+</body>
+
+</html>
