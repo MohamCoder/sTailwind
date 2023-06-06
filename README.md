@@ -13,3 +13,4 @@ this compiler can make it ezer by just simply spisfing what proprty u want to us
 the compiler will convert it into ragular html like this:
 `<div class="p-4 bg-green-500 inline-block h-6 w-12 hover:p-6 hover:bg-green-600">hover me!</div>`
 is this coool?! .
+you can use the active the compiler by runing `npm run dev`
