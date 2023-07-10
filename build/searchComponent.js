@@ -11,7 +11,7 @@ const searchComponent = (arry = []) => {
     let pushAble = false;
     let runSharp = false;
     if (charp === -1) {
-      return { propertys ,arry};
+      return { propertys, arry };
     } else {
       arry[charp] = " ";
     }
@@ -25,13 +25,15 @@ const searchComponent = (arry = []) => {
         runSharp = true;
         arry[i] = " ";
       }
-      if (arry[i] === "(") {
-          pushAble = true;
-          arry[i] = " ";
+      if (arry[i] === "(" && arry[i + 1] === ":") {
+        pushAble = true;
+        arry[i] = " ";
+        arry[i + 1] = " ";
       }
-      if (arry[i] === ")") {
+      if (arry[i] === ":" && arry[i + 1] === ")") {
         pushAble = false;
         arry[i] = " ";
+        arry[i + 1] = " ";
         propertys.push({
           comand: [],
           comandText: [],

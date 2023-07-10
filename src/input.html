@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="output.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <title>My Example Page</title>
 </head>
-
-<body>
-    <div
-        class=" #root#( $color$= 'gray'; $cardPadding$= 'p-4'; $cardMargin$= 'm-4'; $cardRounded$= 'rounded-lg'; $cardShadow$= 'shadow hover:shadow-lg'; $cardTransition$= 'transition duration-300 ease-in-out'; $cardTransform$= 'transform hover:scale-[1.01]'; )">
+<body class="
+    #root#(:
+    $my name$='mohammed ali';
+    $txt$='smth';
+    $div$='<div>$my name$ and $txt$</div>';
+    $input$=[9,8,7,6,5,4,3,2,1];
+    :)
+    #function sort(array)#(:
+        let sorted=array.sort();
+        return sorted.join(' ');
+    :)
+">
+    <div class="">
+        $div$
     </div>
-    <div
-        class="bg-$color$-100 text-$color$-800 $cardPadding$ $cardMargin$ $cardRounded$ $cardShadow$ $cardTransition$ $cardTransform$ #hover#( bg-$color$-200 )">
-        <h2 class="text-lg font-bold mb-2">Card Title</h2>
-        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor nec pharetra
-            ultricies, ante erat imperdiet velit, nec laoreet enim lacus a velit.</p>
-    </div>
+    $sort(#input#)$
 </body>
-
 </html>

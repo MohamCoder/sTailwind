@@ -1,5 +1,3 @@
-const { fork } = require("mz/child_process");
-
 const setVar = (comandText) => {
     let vars = [
         {
@@ -40,6 +38,9 @@ const setVar = (comandText) => {
                         comandText[i] = { call: "smiqulenoutCounter" };
                         smiqulenoutCounter--;
                     }
+                    if (comandText[i] === "=") {
+                        comandText[i] = { call: "equal" };
+                    }
                 }
                 comandText[singleQuoteFillterSmiqulenout] = "'";
             }
@@ -68,9 +69,13 @@ const setVar = (comandText) => {
             vars[j].varValue.unshift("'");
         }
         vars[j].varValue.map((item, index) => {
-            if (typeof item === "object") {
+            if (item.call==="smiqulenoutCounter") {
                 //replace the item with ; in the varvalue
                 vars[j].varValue[index] = ";";
+            }
+            if (item.call==="equal") {
+                //replace the item with = in the varvalue
+                vars[j].varValue[index] = "=";
             }
         });
         vars[j].varValue = vars[j].varValue.join("");
@@ -81,6 +86,14 @@ const setVar = (comandText) => {
                     throw new Error("2:un expected amound of smiqulenout in the varubals");
                 }
             }
+            vars.push({
+                varName: "q",
+                varValue: '"',
+            });
+            vars.push({
+                varName: "a",
+                varValue: '@',
+            });
             return vars;
         } else {
             vars.push({

@@ -23,8 +23,9 @@ const buildApp = (contantForBuild,loop) => {
             if (work.indexOf("class") === -1) return work;
             return builder(work);
         }
-        const [finalresult, converterVars] = converter(propertys,loop);
+        const [finalresult, converterVars,converterFuncsNames] = converter(propertys,loop);
         vars = converterVars;
+        functionNames = converterFuncsNames;
         return (
             contantToPlace +
             arry
@@ -38,6 +39,6 @@ const buildApp = (contantForBuild,loop) => {
         );
     }
     let app = builder(contantForBuild);
-    return { app, vars };
+    return { app, vars,functionNames };
 }
 module.exports = buildApp;

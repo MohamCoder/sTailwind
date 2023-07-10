@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css">
+    <title>Example</title>
+</head>
+
+<body class="
+    #root#(:
+        $color$='blue';
+        $textColor$= 'text-black';
+        $padding$= 'p-4';
+        $rounded$= 'rounded-lg';
+        $shadow$= 'shadow';
+    :)
+    #function capitalize(text)#(:
+        return text.charAt(0).toUpperCase() + text.slice(1);
+    :)
+    #function reverse(text)#(:
+        return text.split('').reverse().join('');
+    :)
+    #function upper(text)#(:
+        return text.toUpperCase();
+    :)
+    #function lower(text)#(:
+        return text.toLowerCase();
+    :)
+    #function title(text)#(:
+        return text.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+    :)
+    #function trim(text)#(:
+        return text.trim();
+    :)
+    #function repeat(text, count)#(:
+        return text.repeat(count);
+    :)
+    #function replace(text, search, replace)#(:
+        return text.replace(search, replace);
+    :)
+    #function slice(text, start, end)#(:
+        return text.slice(start, end);
+    :)
+">
+    <h1 class="text-4xl font-bold text-center my-4">$capitalize('example')$</h1>
+    <div class="
+        bg-$color$-100 $textColor$ $padding$ $rounded$
+        $shadow$ mx-auto w-3/4
+    ">
+        <p>$reverse('This is an example.')$</p>
+        <p>$upper('This is an example.')$</p>
+        <p>$lower('This is an example.')$</p>
+        <p>$title('this is an example')$</p>
+        <p>$trim(' This is an example. ')$</p>
+        <p>$repeat('Example ', 3)$</p>
+        <p>$replace('This is an example.', 'example', 'test')$</p>
+        <p>$slice('This is an example.', 0, 4)$</p>
+    </div>
+</body>
+
+</html>

@@ -1,10 +1,14 @@
+const getFunc = require('./getFunc')
 const getVars = (
     contantApp,
-    refVars
+    refVars,
+    refunctionNames,
+    spacalInMain
 ) => {
     let appContatn="";
-    const getVarsHelper = (contant) => {
+    const getVarsHelper = (contant,spacalIn) => {
         let dolar = contant.indexOf("$");
+        if(spacalIn){dolar=contant.indexOf('#')}
         if (dolar === -1) return contant;
         contant[dolar] = "";
         //before text
@@ -14,23 +18,43 @@ const getVars = (
         let onWorkContant = contantToPlace.splice(dolar + 1);
         //start building the input
         contantToPlace[contantToPlace.length - 1] = "";
-        for (let i = 0; i < onWorkContant.indexOf("$"); i++) {
+        let comapre = onWorkContant.indexOf("$");
+        if (spacalIn) {
+            comapre = onWorkContant.indexOf('#')
+            onWorkContant[comapre]=""
+        }
+        for (let i = 0; i < comapre; i++) {
             toRef += onWorkContant[i];
             onWorkContant[i] = "";
+        }
+        if (toRef.includes("(") || toRef.includes(")")) {
+            toRef = getVars(toRef, refVars, refunctionNames, true);
+            contantToPlace.push(getFunc(refunctionNames, toRef));
         }
         onWorkContant[onWorkContant.indexOf("$")] = "";
         refVars.map((item) => {
             item.map((items) => {
                 if (items.varName === toRef) {
-                    contantToPlace.push(items.varValue.split("").filter((item) => item !== "'").join(""));
+                    if (spacalIn) {
+                        contantToPlace.push(items.varValue);
+                    } else {
+                        contantToPlace.push(items.varValue.split("").filter((item) => item !== "'").join(""));
+                    }
                 }
-            })
+            });
         });
-        return (contantToPlace.join("") + getVars(onWorkContant.join(""), refVars));
+        return (contantToPlace.join("") + getVarsHelper(onWorkContant.join("")));
+    }
+    if (spacalInMain) {
+        appContatn = getVarsHelper(contantApp,true);
+        while (appContatn.split("").indexOf("$") !== -1) {
+            appContatn = getVarsHelper(appContatn,false);
+        }
+        return appContatn
     }
     appContatn = getVarsHelper(contantApp);
-    for (; appContatn.split("").indexOf("$") !== -1;) {
-        appContatn = getVarsHelper(appContatn);
+    while (appContatn.split("").indexOf("$") !== -1) {
+        appContatn = getVarsHelper(appContatn,false);
     }
     return appContatn
 };
